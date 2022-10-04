@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* RESET */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    /* line-height: 1.5; */
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* END RESET */
+
+  /* VARIABLES */
+
+  :root {
+    --primary-clr-red: hsl(0, 78%, 62%);
+    --primary-clr-cyan: hsl(180, 62%, 55%);
+    --primary-clr-og: hsl(34, 97%, 64%);
+    --primary-clr-blue: hsl(212, 86%, 64%);
+
+    --neutral-clr-db: hsla(232, 12%, 34%, 1);
+    --neutral-clr-gb: hsl(229, 6%, 66%);
+    --neutral-clr-lg: hsl(0, 0%, 98%);
+
+    --ff-primary: 'Poppins', sans-serif; 
+
+    --fw-200: 200;
+    --fw-600: 600;
+    --fw-400: 400;
+
+    --fs-heading-small: 24px;
+    --fs-heading-large: 36px;
+    --fs-heading-card: 20px;
+    --fs-body-large: 15px;
+    --fs-body-small: 13px;
+
+    --lh: 23px;
+  }
+
+  /* END VARIABLES */
+
+  body {
+    font-family: var(--ff-primary);
+  }
+
+  html {
+    background-color: var(--neutral-clr-lg);
+  }
+
+  header h1 {
+    font-size: var(--fs-heading-small);
+    font-weight: var(--fw-200);
+    color: var(--neutral-clr-db);
+    max-width: 25ch;
+    margin: auto;
+    padding-block-end: 1rem;
+  }
+
+  #inline-text {
+    font-weight: var(--fw-600);
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .grid-container {
+    display: grid;
+    max-width: 69rem;
+    gap: 25px;
+  }
+
+  header {
+    max-width: 540px;
+    text-align: center;
+    padding-inline: 2rem;
+    padding-block-start: 85px;
+    padding-block-end: 50px;
+  }
+
+  header p {
+    font-size: var(--fs-body-small);
+    min-width: 32ch;
+    margin: auto;
+  }
+
+#team-b {
+    margin-block-end: 25px;
+    border-top: 3.55px solid var(--primary-clr-red);
+    height: 240px;
+}
+
+#supervisor {
+    border-top: 3.55px solid var(--primary-clr-cyan);
+}
+
+#karma {
+    border-top: 3.55px solid var(--primary-clr-og);
+    height: 240px;
+}
+
+#calc {
+    border-top: 3.55px solid var(--primary-clr-blue);
+   
+}
+
+img {
+    position: relative;
+    /* float: right; */
+    /* padding-block-start: 33px; */
+}
+
+  /* Cards */
+
+  .card { 
+    box-shadow: 1px 2px 4px;
+    max-width: 100%;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+.card h2 {
+    font-size: var(--fs-heading-card);
+    font-weight: var(--fw-600);
+    color: var(--neutral-clr-db);
+}
+
+p {
+    color: var(--neutral-clr-gb);
+    font-weight: var(--fw-400);
+    line-height: var(--lh);
+    opacity: 50%;
+}
+
+.card p {
+    font-size: var(--fs-body-small);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+.img-div {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-block-start: 40px;
+}
+
+
+@media (min-width: 630px){
+
+    header h1 {
+        font-size: var(--fs-heading-large);
+    }
+
+    header p {
+        font-size: var(--fs-body-large);
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 240px 240px;
+    }
+
+}
+
+
+@media (min-width: 950px) {
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #supervisor, #calc { 
+        position: relative;
+        top: 132px;
+    }
+
+    .card {
+       padding: 2rem;
+    }
+    
+}
