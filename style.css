@@ -100,7 +100,10 @@
     align-items: center;
     justify-items: center;
     gap: 2rem;
-    padding: 0px 2rem 2rem 2rem;
+    padding-block: 5rem;
+    padding-inline: 2rem;
+    height: 100vh;
+    width: 100vw;
   }
 
   .grid-container {
@@ -113,7 +116,7 @@
     max-width: 33.75rem;
     text-align: center;
     padding-inline: 2rem;
-    padding-block-start: 5.3rem;
+    /* padding-block-start: 5.3rem; */
     padding-block-end: 3.125rem;
   }
 
@@ -166,6 +169,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: white;
   }
 
   .card p {
