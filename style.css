@@ -100,9 +100,7 @@
     align-items: center;
     justify-items: center;
     gap: 2rem;
-    padding-block: 5rem;
     padding-inline: 2rem;
-    height: 100vh;
     width: 100vw;
   }
 
@@ -116,8 +114,8 @@
     max-width: 33.75rem;
     text-align: center;
     padding-inline: 2rem;
-    /* padding-block-start: 5.3rem; */
-    padding-block-end: 3.125rem;
+    padding-block-start: 5.3rem;
+    margin-block-end: 3.125rem;
   }
 
   header h1 {
